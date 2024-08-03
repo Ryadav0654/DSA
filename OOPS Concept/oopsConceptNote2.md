@@ -1,4 +1,4 @@
-i# Encapsulation(Information or data hiding)
+# Encapsulation(Information or data hiding)
 
 It is defined as the the wrapping up of data and information in a single unit.
 
