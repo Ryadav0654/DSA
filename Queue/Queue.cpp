@@ -27,5 +27,16 @@ int main(int argc, char const *argv[])
     {
         cout << "Queue is not empty" << endl;
     }
+
+    cout << "print queue: " << endl;
+    int n = q.size();
+
+    for(int i = 0; i < n; i++){
+        cout << q.front() << " ";
+        q.pop();
+    }
+
+    cout << endl;
+
     return 0;
 };

@@ -46,5 +46,11 @@ int main(int argc, char const *argv[])
     return 0;
 };
 ```
- 
+
+## Implementation of queue using array:
+### Code -
+```
+
+
+```
 ## Circular Queue
