@@ -43,14 +43,16 @@ Node *buildTree(Node *root)
 
 void levelOrderTraversal(Node *root)
 {
-
+    // initialise a queue
     queue<Node *> q;
     q.push(root);
+
+    // to mark the end of the level or separater
     q.push(NULL);
 
     while (!q.empty())
     {
-
+        // store the front element of the queue and remove the front element of the queue 
         Node *temp = q.front();
         q.pop();
 
@@ -67,6 +69,7 @@ void levelOrderTraversal(Node *root)
         }
         else
         {
+            // print the front element of the queue
             cout << temp->data << " ";
             if (temp->left)
             {

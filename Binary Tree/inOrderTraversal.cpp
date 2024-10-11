@@ -42,15 +42,19 @@ Node *buildTree(Node *root)
 }
 
 
+// inOrder Traversal: LNR  => Left, Node, Right(for each node)
+// preOrder Traversal: NLR  => Node, Left, Right
+// postOrder Traversal: LRN  => Left, Right, Node
 void inOrder(Node *root)
 {
-
+    // base case
     if (root == NULL)
     {
         return;
     }
 
-    
+    // recursive call
+    // left, node, right
     inOrder(root->left);
     cout << root->data << " ";
     inOrder(root->right);
@@ -61,9 +65,8 @@ int main(int argc, char const *argv[])
     Node *root = NULL;
 
     // creating the tree
-
     root = buildTree(root);
-    cout << "PreOrder Traversal: ";
+    cout << "InOrder Traversal: ";
     inOrder(root);
     cout << endl;
    

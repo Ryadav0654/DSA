@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 class Node
@@ -63,7 +62,7 @@ int main(int argc, char const *argv[])
     // creating the tree
 
     root = buildTree(root);
-    cout << "PreOrder Traversal: ";
+    cout << "PostOrder Traversal: ";
     postOrder(root);
     cout << endl;
    
