@@ -355,3 +355,60 @@ class Solution {
 - Time Complexity: O(N), where N is the number of nodes.
 - Space Complexity: O(h), where h is the height of tree.
 ```
+# Zig-zag traversal:
+
+## Code:
+
+```C++
+
+vector<int> zigZagTraversal(Node* root) {
+    
+    vector<int> result;
+    if(root == NULL){
+        return result;
+    }
+
+    queue<Node*> q;
+    q.push(root);
+    bool leftToRight = true;
+
+    while(!q.empty()){
+
+        int size = q.size();
+        vector<int> ans(size);
+
+        for(int i = 0; i < size; i++){
+            
+            Node* frontNode = q.front();
+            q.pop();
+            
+            // get index of node
+            int index = leftToRight ? i : size - i - 1;
+
+            ans[index] = frontNode -> data;
+            if(frontNode -> left){
+                q.push(frontNode -> left);
+            }
+
+            if(frontNode -> right){
+                q.push(frontNode -> right);
+            }
+        }
+
+        // change the direction
+        leftToRight = !leftToRight;
+
+        for(auto i : ans){
+            result.push_back(i);
+        }
+    }
+
+    return result;
+}
+
+```
+
+```text
+- Time Complexity: O(N), where N is the number of nodes.
+- Space Complexity: O(N), where N is the number of nodes.
+```
